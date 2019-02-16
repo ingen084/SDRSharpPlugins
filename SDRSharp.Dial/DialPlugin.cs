@@ -96,7 +96,7 @@ namespace SDRSharp.Dial
 					if ((bytes[0] & 0b00000100) == 0)
 						amount = -amount;
 
-					control.SetFrequency(ControlInterface.Frequency + amount, true);
+					ControlInterface.CenterFrequency += amount;
 				};
 			};
 		}
